@@ -41,6 +41,11 @@ const questions = [
           name: 'contributing',
         },
         {
+            type: 'editor',
+            message: 'Please give details regarding how to test: ',
+            name: 'test',
+          },
+        {
           type: 'input',
           message: 'Please enter your name: ',
           name: 'yourname',

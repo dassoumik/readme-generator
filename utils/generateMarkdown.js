@@ -17,6 +17,7 @@ function renderLicenseBadge(license) {
         badge = "https://img.shields.io/badge/license-GNU%20GPLv2-yellowgreen";
         break;  
       default:
+        badge = "";
         break;
         
       }
@@ -40,6 +41,7 @@ function renderLicenseLink(license) { switch (license) {
     licenseLink = "https://choosealicense.com/licenses/gpl-2.0/";
     break;  
   default:
+    licenseLink = "";
     break;
   }
 return licenseLink;}
@@ -80,6 +82,7 @@ function generateMarkdown(data) {
   ${data.contributing}
 
   ## Tests
+  ${data.test}
 
   ## Questions
   Please connnect with me at ${data.email} <br>
