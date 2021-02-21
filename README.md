@@ -7,7 +7,7 @@ This app is designed to create a readme file which can be used by developers to 
 Below is the link to the demo video:
  - [youtube - Demo Video](https://youtu.be/GOO3TqOifMQ)
 
-It will show you how to yse the app.
+It will show you how to use the app.
 
 ## Learnings
  - How to use node.js
