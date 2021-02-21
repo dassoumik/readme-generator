@@ -1,58 +1,64 @@
+// Packages needed for this application
+const fs = require('fs');
 let badge;
 let licenseLink;
+let licenseData;
+let fileName = "./generated-files/LICENSE.txt"
 // Function that returns a license badge based on which license is passed in
 // If there is no license, returns an empty string
 function renderLicenseBadge(license) {
-    switch (license) {
-      case "MIT":
-        badge = "https://img.shields.io/badge/license-MIT-yellowgreen";
-        break;
-      case "ISC":
-        badge = "https://img.shields.io/badge/license-ISC-yellowgreen";
-        break;  
-      case "Apache":
-        badge = "https://img.shields.io/badge/license-Apache-yellowgreen";
-        break; 
-      case "GPL2":
-        badge = "https://img.shields.io/badge/license-GNU%20GPLv2-yellowgreen";
-        break;  
-      default:
-        badge = "";
-        break;
-        
-      }
-    return badge;
-  
+  switch (license) {
+    case "MIT":
+      badge = "https://img.shields.io/badge/license-MIT-yellowgreen";
+      break;
+    case "ISC":
+      badge = "https://img.shields.io/badge/license-ISC-yellowgreen";
+      break;
+    case "Apache":
+      badge = "https://img.shields.io/badge/license-Apache-yellowgreen";
+      break;
+    case "GPL2":
+      badge = "https://img.shields.io/badge/license-GNU%20GPLv2-yellowgreen";
+      break;
+    default:
+      badge = "";
+      break;
+
+  }
+  return badge;
+
 }
 
 // Function that returns the license link
 // If there is no license, returns an empty string
-function renderLicenseLink(license) { switch (license) {
-  case "MIT":
-    licenseLink = "https://choosealicense.com/licenses/mit/";
-    break;
-  case "ISC":
-    licenseLink = "https://choosealicense.com/licenses/isc/";
-    break;  
-  case "Apache":
-    licenseLink = "https://choosealicense.com/licenses/apache-2.0/";
-    break; 
-  case "GPL2":
-    licenseLink = "https://choosealicense.com/licenses/gpl-2.0/";
-    break;  
-  default:
-    licenseLink = "";
-    break;
+function renderLicenseLink(license) {
+  switch (license) {
+    case "MIT":
+      licenseLink = "https://choosealicense.com/licenses/mit/";
+      break;
+    case "ISC":
+      licenseLink = "https://choosealicense.com/licenses/isc/";
+      break;
+    case "Apache":
+      licenseLink = "https://choosealicense.com/licenses/apache-2.0/";
+      break;
+    case "GPL2":
+      licenseLink = "https://choosealicense.com/licenses/gpl-2.0/";
+      break;
+    default:
+      licenseLink = "";
+      break;
   }
-return licenseLink;}
+  return licenseLink;
+}
 
 // Function that returns the license section of README
 // If there is no license, returns an empty string
-function renderLicenseSection(license) {
-  licenseContentMIT = `
+function renderLicenseSection(data) {
+  let licenseContentMIT = `
 MIT License
 
-Copyright (c) ${year} ${data.name}
+Copyright (c) ${data.year} ${data.personName}
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -73,7 +79,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
   `
 
-  licenseContentApache =`
+  let licenseContentApache = `
   Apache License
   Version 2.0, January 2004
 http://www.apache.org/licenses/
@@ -277,10 +283,10 @@ See the License for the specific language governing permissions and
 limitations under the License.
   `
 
-  licenseContentISC = `
+  let licenseContentISC = `
 ISC License
 
-Copyright (c) ${year}, ${data.name}
+Copyright (c) ${data.year}, ${data.personName}
 
 Permission to use, copy, modify, and/or distribute this software for any
 purpose with or without fee is hereby granted, provided that the above
@@ -295,7 +301,7 @@ ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
   `
 
-  licenseContentGPL = `
+  let licenseContentGPL = `
   GNU GENERAL PUBLIC LICENSE
                        Version 2, June 1991
 
@@ -585,15 +591,39 @@ library.  If this is what you want to do, use the GNU Lesser General
 Public License instead of this License.
   
   `
+  switch (data.license) {
+    case "MIT":
+      licenseData = licenseContentMIT;
+      break;
+    case "ISC":
+      licenseData = licenseContentISC;
+      break;
+    case "Apache":
+      licenseData = licenseContentApache;
+      break;
+    case "GPL2":
+      licenseData = licenseContentGPL;
+      break;
+    default:
+      licenseData = "";
+      break;
+  }
+
+  fs.writeFile(fileName, licenseData, (err) =>
+    err ? console.error(err) : console.log('LICENSE logged!'));
 }
 
 // Function to generate markdown for README
 function generateMarkdown(data) {
+  const gitFollow = `https://img.shields.io/github/followers/${data.gituserid}?style=social"`
   const badge = renderLicenseBadge(data.license);
   const licenseLink = renderLicenseLink(data.license);
   renderLicenseLink(data.license);
   renderLicenseSection(data);
-  return `# ${data.title}     ![](${badge})
+  return `# ${data.title}     
+  ![](${badge})
+  <hr>
+
   ## Table of Content
    1. [Description](#Description)
    2. [Installation](#Installation)
@@ -602,28 +632,37 @@ function generateMarkdown(data) {
    5. [Contributing](#Contributing)
    6. [Tests](#Tests)
    7. [Questions](#Questions)  
+   <br>
   ## Description
-  ${data.description}
+  ${data.description}<br>
+  <br>
 
   ## Installation
-  ${data.installation}
+  ${data.installation} <br>
+  <br>
 
   ## Usage
-  ${data.usage}
+  ${data.usage} <br>
+  <br>
 
   ## License
-  This app follow ${data.license} rules. Please check below link for more details.
-  ${licenseLink}
+  This app follow **${data.license}** licensing rules. Please check below link for more details.
+  You can also refer the LICENSE.txt file in the root folder. <br> <br>
+  ${licenseLink} <br>
+  <br>
 
   ## Contributing
-  ${data.contributing}
+  ${data.contributing} <br>
+  <br>
 
   ## Tests
-  ${data.test}
+  ${data.test} <br>
+  <br>
 
   ## Questions
-  Please connnect with me at ${data.email} <br>
-  ![](./utils/GitHub-Mark/PNG/GitHub-Mark-32px.png) [${data.yourname}](https://github.com/${data.gituserid})
+  Please connnect with me at: <br> ${data.email} <br> <br>
+  Please also follow my github at the below link: <br>
+ ![](https://img.shields.io/github/followers/${data.gituserid}?style=social)     [${data.personName}](https://github.com/${data.gituserid})  
 
 `;
 }
