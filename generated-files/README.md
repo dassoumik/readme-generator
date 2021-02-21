@@ -11,7 +11,7 @@
    6. [Tests](#Tests)
    7. [Questions](#Questions)  
    <br>
-  ## Description
+  ## Description <br>
   Donec pretium accumsan orci, tincidunt 
 dignissim nulla feugiat tempor. Cras ultrices 
 blandit leo, ac aliquam dolor euismod vitae. 
@@ -35,7 +35,7 @@ nunc molestie bibendum.
 <br>
   <br>
 
-  ## Installation
+  ## Installation <br>
   Donec pretium accumsan orci, tincidunt 
 dignissim nulla feugiat tempor. Cras ultrices 
 blandit leo, ac aliquam dolor euismod vitae. 
@@ -59,7 +59,7 @@ nunc molestie bibendum.
  <br>
   <br>
 
-  ## Usage
+  ## Usage <br>
   Donec pretium accumsan orci, tincidunt 
 dignissim nulla feugiat tempor. Cras ultrices 
 blandit leo, ac aliquam dolor euismod vitae. 
@@ -83,13 +83,13 @@ nunc molestie bibendum.
  <br>
   <br>
 
-  ## License
+  ## License <br>
   This app follow **MIT** licensing rules. Please check below link for more details.
   You can also refer the LICENSE.txt file in the root folder. <br> <br>
   https://choosealicense.com/licenses/mit/ <br>
   <br>
 
-  ## Contributing
+  ## Contributing <br>
    - Donec pretium accumsan orci, tincidunt 
  - dignissim nulla feugiat tempor. Cras ultrices 
  - blandit leo, ac aliquam dolor euismod vitae. 
@@ -100,7 +100,7 @@ nunc molestie bibendum.
  <br>
   <br>
 
-  ## Tests
+  ## Tests <br>
   Donec pretium accumsan orci, tincidunt 
 dignissim nulla feugiat tempor. Cras ultrices 
 blandit leo, ac aliquam dolor euismod vitae. 
@@ -124,7 +124,7 @@ nunc molestie bibendum.
  <br>
   <br>
 
-  ## Questions
+  ## Questions <br>
   Please connnect with me at: <br> contact.soumikdas@gmail.com <br> <br>
   Please also follow my github at the below link: <br>
  ![](https://img.shields.io/github/followers/dassoumik?style=social)     [Soumik Das](https://github.com/dassoumik)  

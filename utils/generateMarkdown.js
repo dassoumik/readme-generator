@@ -633,33 +633,33 @@ function generateMarkdown(data) {
    6. [Tests](#Tests)
    7. [Questions](#Questions)  
    <br>
-  ## Description
+  ## Description <br>
   ${data.description}<br>
   <br>
 
-  ## Installation
+  ## Installation <br>
   ${data.installation} <br>
   <br>
 
-  ## Usage
+  ## Usage <br>
   ${data.usage} <br>
   <br>
 
-  ## License
+  ## License <br>
   This app follow **${data.license}** licensing rules. Please check below link for more details.
   You can also refer the LICENSE.txt file in the root folder. <br> <br>
   ${licenseLink} <br>
   <br>
 
-  ## Contributing
+  ## Contributing <br>
   ${data.contributing} <br>
   <br>
 
-  ## Tests
+  ## Tests <br>
   ${data.test} <br>
   <br>
 
-  ## Questions
+  ## Questions <br>
   Please connnect with me at: <br> ${data.email} <br> <br>
   Please also follow my github at the below link: <br>
  ![](https://img.shields.io/github/followers/${data.gituserid}?style=social)     [${data.personName}](https://github.com/${data.gituserid})  
