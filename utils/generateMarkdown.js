@@ -622,7 +622,7 @@ function generateMarkdown(data) {
   renderLicenseSection(data);
   return `# ${data.title}     
   ![](${badge})
-  <hr>
+  
 
   ## Table of Content
    1. [Description](#Description)
@@ -633,6 +633,7 @@ function generateMarkdown(data) {
    6. [Tests](#Tests)
    7. [Questions](#Questions)  
    <br>
+
   ## Description <br>
   ${data.description}<br>
   <br>

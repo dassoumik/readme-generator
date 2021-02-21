@@ -1,6 +1,6 @@
 # Demo Readme Generator     
   ![](https://img.shields.io/badge/license-MIT-yellowgreen)
-  <hr>
+  
 
   ## Table of Content
    1. [Description](#Description)
@@ -11,6 +11,7 @@
    6. [Tests](#Tests)
    7. [Questions](#Questions)  
    <br>
+
   ## Description <br>
   Donec pretium accumsan orci, tincidunt 
 dignissim nulla feugiat tempor. Cras ultrices 
@@ -96,7 +97,6 @@ nunc molestie bibendum.
  - Proin pretium pharetra urna, a dignissim dolor 
  - venenatis eu. Quisque ut metus sollicitudin, 
  - hendrerit turpis sed, cursus velit. Praesent 
-
  <br>
   <br>
 
@@ -121,7 +121,7 @@ pretium. Etiam eget finibus ipsum. Cras nec
 leo fermentum, vehicula nisl et, interdum nisl. 
 Nullam sollicitudin suscipit lacus, et volutpat 
 nunc molestie bibendum.
- <br>
+s <br>
   <br>
 
   ## Questions <br>
