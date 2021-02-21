@@ -1,5 +1,5 @@
 # Demo Readme Generator     
-  ![](https://img.shields.io/badge/license-MIT-yellowgreen)
+  ## ![](https://img.shields.io/badge/license-MIT-yellowgreen)
   
 
   ## Table of Content
@@ -121,7 +121,7 @@ pretium. Etiam eget finibus ipsum. Cras nec
 leo fermentum, vehicula nisl et, interdum nisl. 
 Nullam sollicitudin suscipit lacus, et volutpat 
 nunc molestie bibendum.
-s <br>
+ <br>
   <br>
 
   ## Questions <br>

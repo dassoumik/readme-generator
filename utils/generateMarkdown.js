@@ -621,7 +621,7 @@ function generateMarkdown(data) {
   renderLicenseLink(data.license);
   renderLicenseSection(data);
   return `# ${data.title}     
-  ![](${badge})
+  ## ![](${badge})
   
 
   ## Table of Content
