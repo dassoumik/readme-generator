@@ -14,8 +14,8 @@ It will show you how to yse the app.
  - How to use inquirer and other npm packages
 
 ## Generated Files Examples
- - [LICENSE.txt](generated-files\LICENSE.txt)
- - [README.md](generated-files\README.md)
+ - [LICENSE.txt](./generated-files/LICENSE.txt)
+ - [README.md](./generated-files/README.md)
 
  
 
