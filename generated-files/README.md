@@ -10,7 +10,7 @@
    5. [Contributing](#Contributing)
    6. [Tests](#Tests)
    7. [Questions](#Questions)  
-   <br><br>
+   <br>
   ## Description
   Donec pretium accumsan orci, tincidunt 
 dignissim nulla feugiat tempor. Cras ultrices 
